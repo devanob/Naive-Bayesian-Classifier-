@@ -9,13 +9,13 @@ def pdfTextExtract(filename):
     for i in range(pdfReader.numPages):
         pageObjRaw = pdfReader.getPage(i)
         rawText += pageObjRaw.extractText() + " "
-    text = rawText.strip()
-    if text:
-        return text
+    if rawText:
+        return rawText
     
     
 
 def tesFunction():
     print(pdfTextExtract("JD Policy and Advocacy Officer.pdf"))
 
-tesFunction()
+if __name__ == '__main__':
+    tesFunction()
