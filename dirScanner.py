@@ -43,3 +43,5 @@ class folderDirectory:
         return self.list_dir[0][2]
     
         
+if __name__ == '__main__':
+    

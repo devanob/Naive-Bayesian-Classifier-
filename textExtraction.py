@@ -5,6 +5,10 @@ from collections import Counter
 contractions = open("Important/contractions.pickle","rb")
 contractions = pickle.load(contractions)
 import string
+import nltk
+from nltk.corpus import stopwords 
+from nltk.tokenize import word_tokenize 
+stop_words = set(stopwords.words('english'))
 class textExtractionProcessor:
     
     text = ""
@@ -27,8 +31,17 @@ class textExtractionProcessor:
         for word in tempListWords:
             if word.lower() in contractions:
                 self.text = self.text.replace(word, contractions[word.lower()])
+            if not word.islower():
+                self.text = self.text.replace(word, word.lower())
+        ##replit the text
+        
+            
+
         self.text = self.text.translate(str.maketrans(string.punctuation, " "*len(string.punctuation), ''))
         self.removeInternelTrailingSpaces()
+        #remove numbers, words less than two chracter and stopping words
+        filtered_sentence = [word for word in self.text.split() if not (word in stop_words or  word.isdigit() or len(word) < 2) ]
+        self.text = " ".join(filtered_sentence)
         
 
         ##not process contractions 
