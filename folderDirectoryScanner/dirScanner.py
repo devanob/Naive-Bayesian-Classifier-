@@ -44,4 +44,5 @@ class folderDirectory:
     
         
 if __name__ == '__main__':
+    testDir = folderDirectory()
     
