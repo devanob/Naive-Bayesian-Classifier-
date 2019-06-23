@@ -10,6 +10,8 @@ counter = "*"
 pypdf2 = "*"
 sqlalchemy = "*"
 nltk = "*"
+databases = "*"
+aiosqlite = "*"
 
 [requires]
 python_version = "3.7"

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "fdee4c3124c2247e348b2a43d6b7d0e085df7741323333324a6c2f56a9a2dc8e"
+            "sha256": "fca0ca85e9e9bc1a3c4296fd826489a3c2d369a76b5329fc4569cd349588983d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,12 +16,26 @@
         ]
     },
     "default": {
+        "aiosqlite": {
+            "hashes": [
+                "sha256:ad84fbd7516ca7065d799504fc41d6845c938e5306d1b7dd960caaeda12e22a9"
+            ],
+            "index": "pypi",
+            "version": "==0.10.0"
+        },
         "counter": {
             "hashes": [
                 "sha256:9e008590e360936a66c98e1a01e7a9a0ecf6af19cc588107121f5fb4613bb60c"
             ],
             "index": "pypi",
             "version": "==1.0.0"
+        },
+        "databases": {
+            "hashes": [
+                "sha256:d365cff2035c5177ef5fd8c5abf6671da01189521da64848a01251c870daf48f"
+            ],
+            "index": "pypi",
+            "version": "==0.2.2"
         },
         "nltk": {
             "hashes": [
@@ -46,10 +60,10 @@
         },
         "sqlalchemy": {
             "hashes": [
-                "sha256:c7fef198b43ef31dfd783d094fd5ee435ce8717592e6784c45ba337254998017"
+                "sha256:c30925d60af95443458ebd7525daf791f55762b106049ae71e18f8dd58084c2f"
             ],
             "index": "pypi",
-            "version": "==1.3.4"
+            "version": "==1.3.5"
         }
     },
     "develop": {}
