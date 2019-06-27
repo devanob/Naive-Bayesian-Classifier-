@@ -28,13 +28,14 @@ class folderDirectory:
     def setRootDir(self,dir):
         if not dir:
             raise Exception('Exception: setRootDir: "dir" should not be empty string or None ')
+    #gets all Folders in the root without aboslute directory 
     def getListFolder(self):
         return self.list_dir[0][1]
     # retunrs the absolute folder path of each folder in the root directory
     def getPathDirFolder(self):
         return [fulldir[0] for fulldir in self.list_dir[1:]]
     # returns the absolute file path of each folder in the root directory
-    def getFileFolderDir(self):
+    def getFilesDir(self):
         listFiles= self.list_dir[0][2]
         filesDir = [self.root_dir + "/" + fileName  for fileName in listFiles]
         return filesDir
@@ -44,5 +45,6 @@ class folderDirectory:
     
         
 if __name__ == '__main__':
-    testDir = folderDirectory()
+    testDir = folderDirectory("./Dat")
+    print(testDir.getPathDirFolder())
     

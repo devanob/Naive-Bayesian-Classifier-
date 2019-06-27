@@ -2,7 +2,7 @@
 from PDFprocessor  import pdfTextExtract
 import pickle
 from collections import Counter
-contractions = open("Important/contractions.pickle","rb")
+contractions = open("./Important/contractions.pickle","rb")
 contractions = pickle.load(contractions)
 import string
 import nltk
