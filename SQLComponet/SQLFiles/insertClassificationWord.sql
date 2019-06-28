@@ -1,0 +1,6 @@
+INSERT INTO WORD_ClASSIFICATION  (CLASS_ID, WORD_ID, WordCount) 
+VALUES(
+(SELECT ID FROM ClassificationType WHERE  Classification = "{}" ),
+(SELECT ID FROM WORDLIST WHERE WORD = "{}"), 
+{}
+);
